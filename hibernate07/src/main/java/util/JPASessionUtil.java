@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //dddS
+//hsgg
 public class JPASessionUtil {
 
     private static Map<String, EntityManagerFactory> persistenceUnits = new HashMap<>();
