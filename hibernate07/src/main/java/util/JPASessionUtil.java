@@ -7,6 +7,7 @@ import javax.persistence.Persistence;
 import java.util.HashMap;
 import java.util.Map;
 
+//dddS
 public class JPASessionUtil {
 
     private static Map<String, EntityManagerFactory> persistenceUnits = new HashMap<>();
