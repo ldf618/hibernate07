@@ -8,29 +8,110 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">JPASessionUtilTest</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4.066</td><td></td><td></td></tr>
+<tr><th colspan="8">Command line suite</th></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">12</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6.884</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">JPASessionUtilTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">JPASessionUtilTest</td><td><a href="#m0">getEntityManager</a></td><td rowspan="1">1644083189407</td><td rowspan="1">3005</td></tr><tr class="passedeven"><td><a href="#m1">getSession</a></td><td rowspan="1">1644083192415</td><td rowspan="1">154</td></tr><tr class="passedeven"><td><a href="#m2">nonexistentEntityManagerName</a></td><td rowspan="1">1644083192570</td><td rowspan="1">8</td></tr><tr class="passedeven"><td><a href="#m3">nonexistentSessionName</a></td><td rowspan="1">1644083192579</td><td rowspan="1">7</td></tr><tr class="passedeven"><td><a href="#m4">testEntityManager</a></td><td rowspan="1">1644083192586</td><td rowspan="1">550</td></tr><tr class="passedeven"><td><a href="#m5">testSession</a></td><td rowspan="1">1644083193137</td><td rowspan="1">287</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">JPASessionUtilTest</td><td><a href="#m0">getEntityManager</a></td><td rowspan="1">1644770050568</td><td rowspan="1">3675</td></tr><tr class="passedeven"><td><a href="#m1">getSession</a></td><td rowspan="1">1644770054246</td><td rowspan="1">271</td></tr><tr class="passedeven"><td><a href="#m2">nonexistentEntityManagerName</a></td><td rowspan="1">1644770054518</td><td rowspan="1">8</td></tr><tr class="passedeven"><td><a href="#m3">nonexistentSessionName</a></td><td rowspan="1">1644770054527</td><td rowspan="1">10</td></tr><tr class="passedeven"><td><a href="#m4">testEntityManager</a></td><td rowspan="1">1644770054538</td><td rowspan="1">823</td></tr><tr class="passedeven"><td><a href="#m5">testSession</a></td><td rowspan="1">1644770055361</td><td rowspan="1">393</td></tr><tr class="passedodd"><td rowspan="1">LifecycleTest</td><td><a href="#m6">testLifecycle</a></td><td rowspan="1">1644770055757</td><td rowspan="1">710</td></tr><tr class="passedeven"><td rowspan="5">ValidatorTest</td><td><a href="#m7">createUnvalidatedUnderagePerson</a></td><td rowspan="1">1644770056470</td><td rowspan="1">159</td></tr><tr class="passedeven"><td><a href="#m8">createValidPerson</a></td><td rowspan="1">1644770056630</td><td rowspan="1">246</td></tr><tr class="passedeven"><td><a href="#m9">createValidatedNoFNamePerson</a></td><td rowspan="1">1644770056877</td><td rowspan="1">186</td></tr><tr class="passedeven"><td><a href="#m10">createValidatedPoorFNamePerson2</a></td><td rowspan="1">1644770057064</td><td rowspan="1">162</td></tr><tr class="passedeven"><td><a href="#m11">createValidatedUnderagePerson</a></td><td rowspan="1">1644770057226</td><td rowspan="1">169</td></tr></tbody>
 </table>
 <h2>Command line test</h2><h3 id="m0">JPASessionUtilTest#getEntityManager</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">JPASessionUtilTest#getSession</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">JPASessionUtilTest#nonexistentEntityManagerName</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">javax.persistence.PersistenceException: No Persistence provider for EntityManager named nonexistent
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:85)
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
-	at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:17)
+	at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:20)
 	at JPASessionUtilTest.nonexistentEntityManagerName(JPASessionUtilTest.java:27)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">JPASessionUtilTest#nonexistentSessionName</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">javax.persistence.PersistenceException: No Persistence provider for EntityManager named nonexistent
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:85)
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
-	at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:17)
-	at util.JPASessionUtil.getSession(JPASessionUtil.java:23)
+	at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:20)
+	at util.JPASessionUtil.getSession(JPASessionUtil.java:26)
 	at JPASessionUtilTest.nonexistentSessionName(JPASessionUtilTest.java:41)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m4">JPASessionUtilTest#testEntityManager</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">JPASessionUtilTest#testSession</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">LifecycleTest#testLifecycle</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">attempted to load nonexistent reference</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">ValidatorTest#createUnvalidatedUnderagePerson</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">ValidatorTest#createValidPerson</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">ValidatorTest#createValidatedNoFNamePerson</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">javax.validation.ConstraintViolationException: Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage=&apos;no puede ser null&apos;, propertyPath=fname, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate=&apos;{javax.validation.constraints.NotNull.message}&apos;}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:188)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:78)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at ValidatorTest.persist(ValidatorTest.java:69)
+	at ValidatorTest.createValidatedNoFNamePerson(ValidatorTest.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">ValidatorTest#createValidatedPoorFNamePerson2</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">javax.validation.ConstraintViolationException: Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage=&apos;el tamaño tiene que estar entre 2 y 60&apos;, propertyPath=fname, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate=&apos;{javax.validation.constraints.Size.message}&apos;}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:188)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:78)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at ValidatorTest.persist(ValidatorTest.java:69)
+	at ValidatorTest.createValidatedPoorFNamePerson2(ValidatorTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">ValidatorTest#createValidatedUnderagePerson</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">javax.validation.ConstraintViolationException: Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage=&apos;tiene que ser mayor o igual que 13&apos;, propertyPath=age, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate=&apos;{javax.validation.constraints.Min.message}&apos;}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:188)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:78)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at ValidatorTest.persist(ValidatorTest.java:69)
+	at ValidatorTest.createValidatedUnderagePerson(ValidatorTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

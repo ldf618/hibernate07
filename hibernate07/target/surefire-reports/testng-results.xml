@@ -1,21 +1,274 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[attempted to load nonexistent reference]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-02-05T18:46:29 GMT+01:00" name="JPASessionUtilTest" finished-at="2022-02-05T18:46:33 GMT+01:00" duration-ms="4066">
+  <suite started-at="2022-02-13T17:34:10 GMT+01:00" name="Command line suite" finished-at="2022-02-13T17:34:17 GMT+01:00" duration-ms="6884">
     <groups>
     </groups>
-    <test started-at="2022-02-05T18:46:29 GMT+01:00" name="Command line test" finished-at="2022-02-05T18:46:33 GMT+01:00" duration-ms="4066">
+    <test started-at="2022-02-13T17:34:10 GMT+01:00" name="Command line test" finished-at="2022-02-13T17:34:17 GMT+01:00" duration-ms="6884">
+      <class name="LifecycleTest">
+        <test-method signature="testLifecycle()[pri:0, instance:LifecycleTest@5e57643e]" started-at="2022-02-13T17:34:15 GMT+01:00" name="testLifecycle" finished-at="2022-02-13T17:34:16 GMT+01:00" duration-ms="710" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[attempted to load nonexistent reference]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLifecycle -->
+      </class> <!-- LifecycleTest -->
+      <class name="ValidatorTest">
+        <test-method signature="createUnvalidatedUnderagePerson()[pri:0, instance:ValidatorTest@1ad282e0]" started-at="2022-02-13T17:34:16 GMT+01:00" name="createUnvalidatedUnderagePerson" finished-at="2022-02-13T17:34:16 GMT+01:00" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUnvalidatedUnderagePerson -->
+        <test-method signature="createValidPerson()[pri:0, instance:ValidatorTest@1ad282e0]" started-at="2022-02-13T17:34:16 GMT+01:00" name="createValidPerson" finished-at="2022-02-13T17:34:16 GMT+01:00" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createValidPerson -->
+        <test-method signature="createValidatedNoFNamePerson()[pri:0, instance:ValidatorTest@1ad282e0]" started-at="2022-02-13T17:34:16 GMT+01:00" name="createValidatedNoFNamePerson" finished-at="2022-02-13T17:34:17 GMT+01:00" duration-ms="186" status="PASS">
+          <exception class="javax.validation.ConstraintViolationException">
+            <message>
+              <![CDATA[Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+ConstraintViolationImpl{interpolatedMessage='no puede ser null', propertyPath=fname, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[javax.validation.ConstraintViolationException: Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+ConstraintViolationImpl{interpolatedMessage='no puede ser null', propertyPath=fname, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:188)
+at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:78)
+at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+at ValidatorTest.persist(ValidatorTest.java:69)
+at ValidatorTest.createValidatedNoFNamePerson(ValidatorTest.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- javax.validation.ConstraintViolationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createValidatedNoFNamePerson -->
+        <test-method signature="createValidatedPoorFNamePerson2()[pri:0, instance:ValidatorTest@1ad282e0]" started-at="2022-02-13T17:34:17 GMT+01:00" name="createValidatedPoorFNamePerson2" finished-at="2022-02-13T17:34:17 GMT+01:00" duration-ms="162" status="PASS">
+          <exception class="javax.validation.ConstraintViolationException">
+            <message>
+              <![CDATA[Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+ConstraintViolationImpl{interpolatedMessage='el tamaño tiene que estar entre 2 y 60', propertyPath=fname, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate='{javax.validation.constraints.Size.message}'}
+]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[javax.validation.ConstraintViolationException: Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+ConstraintViolationImpl{interpolatedMessage='el tamaño tiene que estar entre 2 y 60', propertyPath=fname, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate='{javax.validation.constraints.Size.message}'}
+]
+at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:188)
+at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:78)
+at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+at ValidatorTest.persist(ValidatorTest.java:69)
+at ValidatorTest.createValidatedPoorFNamePerson2(ValidatorTest.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- javax.validation.ConstraintViolationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createValidatedPoorFNamePerson2 -->
+        <test-method signature="createValidatedUnderagePerson()[pri:0, instance:ValidatorTest@1ad282e0]" started-at="2022-02-13T17:34:17 GMT+01:00" name="createValidatedUnderagePerson" finished-at="2022-02-13T17:34:17 GMT+01:00" duration-ms="169" status="PASS">
+          <exception class="javax.validation.ConstraintViolationException">
+            <message>
+              <![CDATA[Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+ConstraintViolationImpl{interpolatedMessage='tiene que ser mayor o igual que 13', propertyPath=age, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate='{javax.validation.constraints.Min.message}'}
+]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[javax.validation.ConstraintViolationException: Validation failed for classes [util.model.ValidatedSimplePerson] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+ConstraintViolationImpl{interpolatedMessage='tiene que ser mayor o igual que 13', propertyPath=age, rootBeanClass=class util.model.ValidatedSimplePerson, messageTemplate='{javax.validation.constraints.Min.message}'}
+]
+at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:188)
+at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:78)
+at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+at ValidatorTest.persist(ValidatorTest.java:69)
+at ValidatorTest.createValidatedUnderagePerson(ValidatorTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- javax.validation.ConstraintViolationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createValidatedUnderagePerson -->
+      </class> <!-- ValidatorTest -->
       <class name="JPASessionUtilTest">
-        <test-method signature="getEntityManager()[pri:0, instance:JPASessionUtilTest@10d59286]" started-at="2022-02-05T18:46:29 GMT+01:00" name="getEntityManager" finished-at="2022-02-05T18:46:32 GMT+01:00" duration-ms="3005" status="PASS">
+        <test-method signature="getEntityManager()[pri:0, instance:JPASessionUtilTest@44f75083]" started-at="2022-02-13T17:34:10 GMT+01:00" name="getEntityManager" finished-at="2022-02-13T17:34:14 GMT+01:00" duration-ms="3675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getEntityManager -->
-        <test-method signature="getSession()[pri:0, instance:JPASessionUtilTest@10d59286]" started-at="2022-02-05T18:46:32 GMT+01:00" name="getSession" finished-at="2022-02-05T18:46:32 GMT+01:00" duration-ms="154" status="PASS">
+        <test-method signature="getSession()[pri:0, instance:JPASessionUtilTest@44f75083]" started-at="2022-02-13T17:34:14 GMT+01:00" name="getSession" finished-at="2022-02-13T17:34:14 GMT+01:00" duration-ms="271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSession -->
-        <test-method signature="nonexistentEntityManagerName()[pri:0, instance:JPASessionUtilTest@10d59286]" started-at="2022-02-05T18:46:32 GMT+01:00" name="nonexistentEntityManagerName" finished-at="2022-02-05T18:46:32 GMT+01:00" duration-ms="8" status="PASS">
+        <test-method signature="nonexistentEntityManagerName()[pri:0, instance:JPASessionUtilTest@44f75083]" started-at="2022-02-13T17:34:14 GMT+01:00" name="nonexistentEntityManagerName" finished-at="2022-02-13T17:34:14 GMT+01:00" duration-ms="8" status="PASS">
           <exception class="javax.persistence.PersistenceException">
             <message>
               <![CDATA[No Persistence provider for EntityManager named nonexistent]]>
@@ -24,7 +277,7 @@
               <![CDATA[javax.persistence.PersistenceException: No Persistence provider for EntityManager named nonexistent
 at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:85)
 at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
-at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:17)
+at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:20)
 at JPASessionUtilTest.nonexistentEntityManagerName(JPASessionUtilTest.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -52,7 +305,8 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 at org.testng.TestNG.runSuites(TestNG.java:1063)
 at org.testng.TestNG.run(TestNG.java:1031)
 at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
 at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -69,7 +323,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nonexistentEntityManagerName -->
-        <test-method signature="nonexistentSessionName()[pri:0, instance:JPASessionUtilTest@10d59286]" started-at="2022-02-05T18:46:32 GMT+01:00" name="nonexistentSessionName" finished-at="2022-02-05T18:46:32 GMT+01:00" duration-ms="7" status="PASS">
+        <test-method signature="nonexistentSessionName()[pri:0, instance:JPASessionUtilTest@44f75083]" started-at="2022-02-13T17:34:14 GMT+01:00" name="nonexistentSessionName" finished-at="2022-02-13T17:34:14 GMT+01:00" duration-ms="10" status="PASS">
           <exception class="javax.persistence.PersistenceException">
             <message>
               <![CDATA[No Persistence provider for EntityManager named nonexistent]]>
@@ -78,8 +332,8 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
               <![CDATA[javax.persistence.PersistenceException: No Persistence provider for EntityManager named nonexistent
 at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:85)
 at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
-at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:17)
-at util.JPASessionUtil.getSession(JPASessionUtil.java:23)
+at util.JPASessionUtil.getEntityManager(JPASessionUtil.java:20)
+at util.JPASessionUtil.getSession(JPASessionUtil.java:26)
 at JPASessionUtilTest.nonexistentSessionName(JPASessionUtilTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -107,7 +361,8 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 at org.testng.TestNG.runSuites(TestNG.java:1063)
 at org.testng.TestNG.run(TestNG.java:1031)
 at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
 at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -124,15 +379,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nonexistentSessionName -->
-        <test-method signature="testEntityManager()[pri:0, instance:JPASessionUtilTest@10d59286]" started-at="2022-02-05T18:46:32 GMT+01:00" name="testEntityManager" finished-at="2022-02-05T18:46:33 GMT+01:00" duration-ms="550" status="PASS">
+        <test-method signature="testEntityManager()[pri:0, instance:JPASessionUtilTest@44f75083]" started-at="2022-02-13T17:34:14 GMT+01:00" name="testEntityManager" finished-at="2022-02-13T17:34:15 GMT+01:00" duration-ms="823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEntityManager -->
-        <test-method signature="testSession()[pri:0, instance:JPASessionUtilTest@10d59286]" started-at="2022-02-05T18:46:33 GMT+01:00" name="testSession" finished-at="2022-02-05T18:46:33 GMT+01:00" duration-ms="287" status="PASS">
+        <test-method signature="testSession()[pri:0, instance:JPASessionUtilTest@44f75083]" started-at="2022-02-13T17:34:15 GMT+01:00" name="testSession" finished-at="2022-02-13T17:34:15 GMT+01:00" duration-ms="393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSession -->
       </class> <!-- JPASessionUtilTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- JPASessionUtilTest -->
+  </suite> <!-- Command line suite -->
 </testng-results>
